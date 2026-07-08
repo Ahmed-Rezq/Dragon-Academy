@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    font-family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* تخصيص شكل شريط التمرير عشان يليق على الأكاديمية */
+::-webkit-scrollbar {
+    width: 10px; /* عرض شريط الاسكرول */
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0f19; /* لون خلفية المجرى بتاعة الاسكرول (خليه نفس لون خلفيتك الغامقة) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff; /* لون الشريط المتحرك نفسه (ممكن تخليه بنفسجي داكن عشان يليق مع الـ Glow) */
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d3a3cb; /* لما المستخدم يقف بالماوس على الاسكرول ينور خفيف */
+}
+    box-sizing: border-box;
+}
+
+/* حدد كلاس موحد أو أوسمة السيكشنز وعمم عليها المسافة */
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+header
+{
+    position: fixed; /* بيخليه ثابت مكانه فوق علطول وأنت بتعمل سكرول */
+    top: 20px;       /* بيبعده عن السقف من فوق عشان ميبقاش ملزوق */
+    left: 5%;        /* بيوسطن الشريط في الشاشة من الشمال */
+    width: 90%;      /* بيخلي عرضه أصغر شوية من عرض الشاشة بالكامل عشان يبان طاير */
+    z-index: 1000;    /* نفس القيمة بتاعتك عشان يفضل فوق الكروت */
+    display: flex;   /* نفس الكود بتاعك */
+    justify-content: space-between; /* نفس الكود بتاعك */
+    align-items: center; /* نفس الكود بتاعك */
+    
+    /* الستايل الجديد المضاف (الحواف الدائرية والخلفية والظل) */
+    background-color: rgb(6, 13, 32); /* نفس لونك المفضل */
+    border-radius: 40px;            /* بيعمل الحواف الدائرية الفخمة */
+    padding: 12px 40px;             /* تظبيط المسافات الداخلية جوه الشريط */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* بيعمل ظل خفيف يخليه كأنه طاير ببعد تالت */
+
+   border: 3px solid white;
+}
+
+.logo {
+    text-decoration: none;          
+    color: white;              
+    font-size: 25px;            
+    font-weight: bold;         
+    display: inline-block;     
+    transition: all 0.3s ease;  
+}
+
+.logo:hover
+{
+    color: rgb(202, 190, 186);
+    transform: scale(1.2);
+}
+
+
+.navigation a 
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 30px ; 
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover
+{
+    color: rgb(202, 190, 186);
+    transform: scale(1.2);
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 10%;
+    
+    background : url(back.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+/* 1. صندوق الصورة (تأمين المحاذاة مع الكلام) */
+.poto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* بيضمن إن الصورة تكون في نفس مستوى الكلام بالظبط عمودياً */
+}
+
+
+/* 2. تنسيق الصورة وتأثير قطرة الماء المتحركة */
+.poto img {
+    width: 320px; /* حددنا حجم مناسب ومتناسق للصورة */
+    height: 320px;
+    object-fit: cover; /* بيضمن إن صورتك متتمطش وتفضل بأبعادها الطبيعية جوه الإطار */
+    
+    /* خلفية قطرة الماء */
+    background:whitesmoke;
+
+    /* تحديد لون الإطار الفاتح (بينور ويزهى مع الخلفية الغامقة) */
+    border: 3px solid rgb(0, 0, 0); 
+    
+    /* السحر هنا: شكل قطرة الماء غير المنتظم */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    
+    /* تفعيل الأنيميشن اللي هيحرك القطرة */
+    animation: blobMorph 5s ease-in-out infinite;
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* ضل يبرزها عن الخلفية */
+}
+
+/* 3. كود حركة قطرة الماء (التموج المائي) */
+@keyframes blobMorph {
+    0% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+    33% {
+        border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%; /* زوايا مختلفة تماماً لزيادة التموج */
+    }
+    66% {
+        border-radius: 30% 70% 30% 70% / 40% 60% 40% 60%; /* حركة عكسية قوية */
+    }
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; /* العودة للأصل */
+    }
+}
+
+.text h3
+{
+    color: rgb(209, 202, 216);
+    font-weight: 1000;
+}
+
+.text h2
+{
+    color: rgb(168, 97, 235);
+    font-weight: 800;
+}
+
+.text h2 span
+{
+    color: rgb(235, 233, 97);
+    font-weight: 1000;
+}
+
+.text h1
+{
+    color: whitesmoke;
+    font-weight: 800;
+}
+
+.text h1 span
+{
+    color: rgb(211, 0, 0);
+    font-weight: 1000;
+}
+
+.text p
+{
+    color: rgb(250, 221, 221);
+    font-weight: 700;
+}
+
+.text .p2
+{
+    color: rgb(250, 221, 221);
+    margin-bottom: 30px;
+}
+
+
+
+
+.text .btn
+{
+    background-color: rgb(0, 87, 248);
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    padding: 12px 35px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    transition: 0.3s ease; 
+}
+
+.text .btn:hover
+{
+   background-color: blue;
+    transform: scale(1.1);   
+}
+
+/* .social_icons
+{
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    font-size: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social_icons:hover i
+{
+    transform: translateY(-1px);
+    filter: brightness(1.2);
+} */
+

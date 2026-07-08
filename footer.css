@@ -1,0 +1,132 @@
+/* الخلفية الأساسية للفوتر بالكامل */
+.main-footer {
+    background-color: #0b0c10; /* أسود ليلي فخم وعميق */
+    padding: 60px 5% 30px 5%;
+    width: 100%;
+    font-family: sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* خط علوي نحيف جداً وشفاف */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* توزيع الأقسام بشكل مرن وبدون بطاقات */
+.footer-content {
+    display: flex;
+    flex-direction: row-reverse; /* للقراءة الصحيحة من اليمين للشمال */
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* تنسيق القوائم والعناوين */
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    direction: rtl;
+    text-align: right;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-section ul {
+    list-style: none; /* تنظيف تام من أي نقط سوداء */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-section ul li a, .footer-section ul li {
+    color: #c5c6c7; /* لون رمادي ناعم ومريح للعين */
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* تأثير الـ Hover الناري للروابط */
+.footer-section ul li a:hover {
+    color: #ff7a33; /* يقلب برتقالي ناري تفاعلي */
+    padding-right: 5px; /* حركة إزاحة خفيفة جهة اليمين تعطي طابع جمالي */
+}
+
+/* تنسيق أيقونات السوشيال ميديا على شكل شبكة دائرية عصري */
+.social-links-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* 1️⃣ الأستايل الأساسي والحركة لكل الأيقونات */
+.social-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1f2833; /* الخلفية الغامقة الثابتة */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease; /* الأنيميشن الناعم */
+}
+
+/* 2️⃣ تأثير الحركة المشترك (لما الماوس يقف على الأيقونة تترفع لفوق) */
+.social-item:hover {
+    transform: translateY(-5px);
+}
+
+/* ------------------------------------------------------------- */
+/* 3️⃣ تحديد ألوان الهوفر لكل منصة بشكل مستقل تماماً ومنعزل 🎨 */
+/* ------------------------------------------------------------- */
+
+/* لما يقف على الفيس بوك اقلب الخلفية أزرق */
+.fb:hover {
+    background-color: #1877f2 !important;
+}
+
+/* لما يقف على الواتساب اقلب الخلفية أخضر */
+.wa:hover {
+    background-color: #25d366 !important;
+}
+
+/* لما يقف على التليجرام اقلب الخلفية أزرق سماوي */
+.tg:hover {
+    background-color: #0088cc !important;
+}
+
+/* لما يقف على الجيتهاب اقلب الخلفية أسود صريح */
+.gh:hover {
+    background-color: #333333 !important;
+}
+
+.ig:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+}
+
+.yt:hover {
+    background-color: #ff0000 !important;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    color: #666d75;
+    font-size: 13px;
+}

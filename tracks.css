@@ -1,0 +1,104 @@
+.tracks-section {
+    width: 100%;
+    min-height: 100vh;
+    background : url(back.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first-start;
+}
+
+.track_title {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ffffff;
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.track_title span 
+{
+    color:  rgb(189, 178, 201);
+    text-shadow: 0 0 20px  rgb(189, 178, 201);
+}
+
+
+
+
+.tracks_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px; /* يعطي مسافات متناسقة بين الكروت */
+}
+
+.track_card {
+    background: linear-gradient(145deg, rgb(211, 163, 203), rgb(255, 255, 255));
+    width: 400px;
+    box-shadow: 0 10px 25px rgb(68, 36, 36) ;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: all 0.7s ease;
+}
+
+.track_card:hover 
+{
+    transform: scale(1.05); /* حركة زوم خفيفة وراقية جداً لتمييز الكارت */
+    
+    
+}
+
+.track_icon
+{
+    color: rgb(72, 2, 151);  
+    text-shadow: 0 0 10px rgba(168, 97, 235, 1);
+    font-size: 125px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.track_info
+{
+    text-align: center;
+}
+
+
+.track_info h3 {
+    color: rgb(72, 2, 151);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.track_info p {
+    color: rgb(100, 79, 175);
+    font-size: 16px;
+}
+
+.track_info a
+{
+    text-decoration: none;
+    color: rgb(39, 1, 54);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.track_info a:hover
+{
+    color: rgb(79, 53, 199);
+    
+}
+
+

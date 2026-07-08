@@ -1,0 +1,86 @@
+.tips_section {
+    width: 100%;
+    min-height: 100vh;
+    background : url(back.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first-start;
+}
+
+.tips_title {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 25px #ffffff;
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.tips_title span 
+{
+    color:  rgb(255, 0, 0);
+    text-shadow: 0 0 25px  rgb(255, 0, 0);
+}
+
+.tips_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px; /* يعطي مسافات متناسقة بين الكروت */
+}
+
+.tips_card {
+    background: rgb(238, 233, 233);
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgb(238, 233, 233);
+    padding: 30px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row-reverse; /* بيخلي العناصر تيجي جنب بعضها وتبدأ من اليمين للشمال */
+    align-items: center;        /* بيخلي الأيقونة والنصوص على خط استواء واحد عمودياً */
+    justify-content: space-between; /* بيوزع العناصر بحيث يسيب مسافة متناسقة بينهم */
+    gap: 20px;                  /* مسافة أمان بين الأيقونة والكلام عشان ما يلزقوش في بعض */
+    width: 90%;
+    max-width: 850px;               /* عشان الكارت يفرد بالعرض ويشيل العناصر مرتاحة */
+    
+    transition: 0.7s ease;
+
+}
+
+.tips_card:hover {
+    transform: scale(1.05); /* حركة زوم خفيفة وراقية جداً لتمييز الكارت */
+    background: rgb(224, 208, 208);
+}
+
+.tips_info
+{
+    direction: rtl;       /* بيجبر النص يبدأ من اليمين تماماً (أول الكارت) */
+    text-align: right;    /* بيحاذي الكلام لليمين */
+    width: 100%;          /* بيخلي الحاوية تاخد عرض الكارت بالكامل */
+    word-wrap: break-word; /* الأمان: لو فيه كلمة طويلة جداً بيكسرها وينزلها سطر */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   
+
+
+.tips_info h3 {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+}
+
+.tips_info p {
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+    
+}

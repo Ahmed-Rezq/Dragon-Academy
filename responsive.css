@@ -1,0 +1,452 @@
+/* =====================================================================
+   RESPONSIVE.CSS
+   ملف مسؤول عن تظبيط شكل الموقع على كل أنواع الشاشات
+   (Desktop / Laptop / Tablet / Mobile)
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   1) عناصر عامة تفيد كل الشاشات
+--------------------------------------------------------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* سيكشن about ناقصه مسافة جانبية من الأساس، بنضيفها عشان الكروت متلزقش في الحواف */
+.about {
+    padding: 0 5%;
+}
+
+.card,
+.track_card,
+.tips_card {
+    max-width: 100%;
+}
+
+/* حماية صورة البروفايل من أي تكموش أو تصغير غير متوقع بسبب الفلكس */
+.poto {
+    flex-shrink: 0;
+}
+
+.poto img {
+    max-width: none;
+    flex-shrink: 0;
+}
+
+/* background-attachment: fixed بيعمل مشاكل رندر (اختفاء/تهنيج) على أغلب متصفحات
+   الموبايل (خصوصاً iOS Safari و Chrome Android)، فبنلغيه على الشاشات الصغيرة
+   ونخليه scroll عادي عشان الخلفية والعناصر اللي فوقها تفضل ثابتة ومستقرة */
+@media (max-width: 1024px) {
+    .home,
+    .about,
+    .tracks-section,
+    .tips_section {
+        background-attachment: scroll;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   2) قائمة الموبايل (الهامبرجر) - مبنية بـ CSS فقط بدون جافاسكريبت
+--------------------------------------------------------------------- */
+.menu_toggle {
+    display: none; /* الشيك بوكس نفسه مخفي، بنستخدمه بس عشان نتحكم في الحالة */
+}
+
+.hamburger {
+    display: none; /* يبان بس في الموبايل */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    width: 42px;
+    height: 36px;
+    z-index: 1100;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* أنيميشن تحول الهامبرجر لعلامة X لما القايمة تتفتح */
+.menu_toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu_toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+.menu_toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---------------------------------------------------------------------
+   3) Tablets الكبيرة / اللابتوب الصغير (<= 1024px)
+--------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+    header {
+        left: 3%;
+        width: 94%;
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 18px;
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 60px 6%;
+        gap: 30px;
+    }
+
+    .poto img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .text h2 {
+        font-size: 20px;
+    }
+
+    .card,
+    .track_card {
+        width: 45%;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   4) Tablets (<= 900px) - نبدأ نلغي الفروق بين العناصر تدريجياً
+--------------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+    .card,
+    .track_card {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .tips_card {
+        width: 100%;
+    }
+
+    .contact_content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   5) الموبايل الكبير / التابلت العمودي (<= 768px)
+--------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* ===== الهيدر و القائمة ===== */
+
+    header {
+        top: 12px;
+        left: 50% !important;
+        transform: translateX(-50%) !important; 
+        width: 90% !important; 
+        max-width: 450px !important; 
+        padding: 10px 20px !important;
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navigation {
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 0;
+        width: 100%;
+        background-color: rgb(6, 13, 32);
+        border: 2px solid white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.35s ease;
+    }
+
+    .menu_toggle:checked ~ .navigation {
+        max-height: 400px;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 20px 0;
+    }
+
+    .navigation a {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+
+    /* ===== سيكشن الهوم ===== */
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        min-height: auto;
+        padding: 140px 6% 60px;
+        gap: 20px;
+    }
+
+    .text h1 {
+        font-size: 26px;
+    }
+
+    .text h2 {
+        font-size: 18px;
+    }
+
+    .text h3 {
+        font-size: 16px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .text .btn {
+        font-size: 16px;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+    }
+
+    .social-links-grid {
+        justify-content: center;
+    }
+
+    .poto img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* ===== سيكشن الـ about ===== */
+    .title {
+        font-size: 34px;
+        margin-top: 60px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 420px;
+        padding: 25px;
+        margin: 12px auto;
+    }
+
+    .icon {
+        font-size: 90px;
+    }
+
+    /* ===== سيكشن الـ tracks ===== */
+    .track_title {
+        font-size: 34px;
+        margin-top: 60px;
+    }
+
+    .track_card {
+        width: 90%;
+        max-width: 420px;
+        padding: 25px;
+        margin: 12px auto;
+    }
+
+    .track_icon {
+        font-size: 90px;
+    }
+
+    /* ===== سيكشن الـ tips ===== */
+    .tips_title {
+        font-size: 34px;
+        margin-top: 60px;
+    }
+
+    .tips_card {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        margin: 12px auto;
+    }
+
+    .tips_info {
+        text-align: center;
+    }
+
+    /* ===== سيكشن الـ contact ===== */
+    .contact_title {
+        font-size: 34px;
+    }
+
+    .contact_card {
+        width: 90%;
+        max-width: 420px;
+        margin: 12px auto;
+    }
+
+    /* ===== الفوتر ===== */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-section ul {
+        align-items: center;
+    }
+
+    .social-links-grid {
+        justify-content: center;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   6) الموبايل الصغير (<= 480px)
+--------------------------------------------------------------------- */
+@media (max-width: 480px) {
+
+    header {
+        padding: 10px 15px;
+        border-radius: 25px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .home {
+        padding: 120px 6% 50px;
+    }
+
+    .poto img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .text h1 {
+        font-size: 21px;
+    }
+
+    .text h2 {
+        font-size: 16px;
+    }
+
+    .text h3 {
+        font-size: 14px;
+    }
+
+    .text p {
+        font-size: 13px;
+    }
+
+    .text .btn {
+        font-size: 14px;
+        padding: 9px 20px;
+        border-radius: 15px;
+    }
+
+    .social-item {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .title,
+    .track_title,
+    .tips_title,
+    .contact_title {
+        font-size: 26px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    /* 1️⃣ كروت المسارات والميزات والنصائح (مفرودة وجميلة ومريحة للعين) */
+    .card,
+    .track_card,
+    .tips_card {
+        padding: 18px !important;
+        margin: 12px auto !important;
+        width: 92% !important;
+    }
+
+    /* 2️⃣ كروت التواصل فقط (ملمومة وشيك ومش مطوطة على الفاضي) */
+    .contact_card {
+        padding: 18px !important;
+        margin: 15px auto !important;
+        width: 85% !important;
+        max-width: 320px !important;
+    }
+
+    /* 3️⃣ كسر الإيميل عشان ينزل سطر جديد وميخرجش برة الكارت الصغير */
+    .contact_card p, 
+    .contact_card a {
+        word-break: break-all !important;
+        white-space: normal !important;
+    }
+
+    .icon,
+    .track_icon {
+        font-size: 95px;
+        margin-bottom: 18px;
+    }
+
+    .info h3,
+    .track_info h3,
+    .tips_info h3 {
+        font-size: 17px;
+    }
+
+    .info p,
+    .track_info p,
+    .tips_info p {
+        font-size: 13px;
+    }
+
+    .track_info a {
+        font-size: 18px;
+    }
+
+    .main-footer {
+        padding: 40px 6% 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+}

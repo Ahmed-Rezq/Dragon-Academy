@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="أكاديمية التنين هي منصة تعليمية أسسها أحمد رزق، تهدف إلى منع تشتت البدايات في عالم البرمجة، وتنظيم وقتك وتوجيهك بخطوات ثابتة من الصفر حتى الاحتراف.">    
-    
-    <meta name="keywords" content="أكاديمية التنين, أحمد رزق, تشتت البدايات, تنظيم وقت البرمجة, تعلم البرمجة, كورس ويب, Dragon Academy">
-    <meta name="author" content="أحمد رزق">
-    
+    <meta name="description" content="أكاديمية التنين هي منصة تعليمية مجانية أسسها أحمد رزق، تساعد المبتدئين على تعلم البرمجة من الصفر حتى الاحتراف من خلال مسارات تعليمية منظمة ومصادر مجانية ونصائح عملية.">    
+    <meta name="language" content="Arabic">
+    <meta name="keywords" content="أكاديمية التنين, Dragon Academy, تعلم البرمجة, HTML, CSS, JavaScript, Python, C, C++, PHP, برمجة, تعليم البرمجة, أحمد رزق">
+    <meta name="author" content="أحمد رزق">    
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="أكاديمية التنين | Dragon Academy">
+    <meta property="og:description" content="تعلم البرمجة من الصفر حتى الاحتراف من خلال مسارات تعليمية مجانية.">
+    <meta property="og:image" content="https://ahmed-rezq.github.io/Dragon-Academy/logo.png">
+    <meta property="og:url" content="https://ahmed-rezq.github.io/Dragon-Academy/">
+    <meta property="og:type" content="website">
+
     <link rel="icon" type="image/png" href="logo.png">
     <link href="index.css" rel="stylesheet">
+    <link href="roadmap.css" rel="stylesheet">
+    <link href="channels.css" rel="stylesheet">
     <link href="tracks.css" rel="stylesheet">
+    <link href="about_me.css" rel="stylesheet">
     <link href="about.css" rel="stylesheet">
     <link href="tips.css" rel="stylesheet">
     <link href="contact.css" rel="stylesheet">
     <link href="footer.css" rel="stylesheet">
     <link href="responsive.css" rel="stylesheet">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 
-    <title> أكاديمية التنين | Dragon Academy</title>
+    <title>أكاديمية التنين | Dragon Academy | تعلم البرمجة من الصفر</title>
 
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "أكاديمية التنين",
+        "alternateName": "Dragon Academy",
+        "description": "أكاديمية التنين هي منصة تعليمية مجانية أسسها أحمد رزق، تساعد المبتدئين على تعلم البرمجة من الصفر حتى الاحتراف من خلال مسارات تعليمية منظمة ومصادر مجانية ونصائح عملية.",
+        "url": "https://ahmed-rezq.github.io/Dragon-Academy/",
+        "logo": "https://ahmed-rezq.github.io/Dragon-Academy/logo.png",
+        "sameAs": [
+            "https://github.com/AhmedRezk2025",
+            "https://youtube.com/@fxdggdhbdf-l7d",
+            "https://instagram.com/ahmedrezq2026",
+            "https://www.facebook.com/profile.php?id=61571928240393"]
+    }
+</script>
 
 
 </head>
@@ -38,11 +65,13 @@
            🐉أكاديمية التنين
         </a>
         <nav class="navigation"> 
-        <a href="#home_page">الرئيسية</a>
-        <a href="#about_academy">عن الأكاديمية</a>
-        <a href="#tracks">المسارات التعليمية</a>
-        <a href="#tips">نصائح التنين</a>
-        <a href="#contact">التواصل</a>
+            <a href="#home_page">الرئيسية</a>
+            <a href="#about_academy">عن الأكاديمية</a>
+            <a href="#about_me">نبذة عني</a>
+            <a href="#tracks">المسارات التعليمية</a>
+            <a href="#tips">نصائح التنين</a>
+            <a href="#contact">التواصل</a>
+            
         </nav>
     </header>
     
@@ -71,7 +100,7 @@
             </div>
             
             <div class="poto">
-                <img src="poto3.png" alt="My poto">
+                <img src="poto3.png" alt="My photo">
             </div>
         </section>
 
@@ -110,14 +139,69 @@
                     <div class="info">
                         <h3>التوسع والمصادر = انطلاق نحو الاحتراف</h3>
                         <p>بعد أن تأخذ الفكرة الأساسية، نختصر عليك عناء البحث ونربطك مباشرة بأفضل المصادر والمنصات العالمية مثل W3Schools لتبدأ رحلة التعلم الفعلي فوراً.</p>
+                    </div>        
+                </div>
+            
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-regular fa-map"></i>
                     </div>
-                
+                    <div class="info">
+                        <h3>خارطة الطريق = طريقك الواضح للاحتراف</h3>
+                        <p>نرسخ لك خطوات مدروسة تبدأ من الصفر وحتى بناء أول مشروع متكامل لك، لتوفير الوقت والجهد وتجنب التشتت بين المسارات البرمجية المختلفة.</p>
+                        <a href="roadmaps.html" class="about_link" target="_blank"> اضغط هنا لعرض خارطة الطريق كاملة</a>
+                    </div>        
+                </div>
 
-            </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <div class="info">
+                        <h3>مصادر وقنوات اليوتيوب = التعلم من أفضل صناع المحتوى</h3>
+                        <p>جمعنا لك ترشيحات لأقوى وأفضل القنوات التعليمية العربية والعالمية التي تقدم شرحاً مبسطاً وتطبيقاً عملياً حقيقياً يختصر عليك رحلة البحث.</p>
+                        <a href="channels.html" class="about_link" target="_blank"> اضغط هنا لتصفح القنوات المرشحة</a>
+                    </div>
+            </div>  
         </section>
         
         <!-- ======================================================================================================== -->
-
+        <section id="about_me" class="about-me_section">
+            <h2 class="tips_title">نبذة <span>عني</span></h2>
+            <div class="tips_content">
+                <div class="tips_card">
+                    <div class="tips_info">
+                        <h3>🚀 من أنا؟</h3>
+                        <p>أنا أحمد رزق، أبلغ من العمر 16 عامًا، طالب في الصف الثاني الثانوي. بدأت رحلتي في تعلم البرمجة عام 2025 من الصفر، وأسعى إلى تطوير مهاراتي من خلال التعلم المستمر والتطبيق العملي.</p>
+                    </div>
+                </div>
+            </div>
+         
+                <div class="tips_card">
+                    <div class="tips_info">
+                        <h3>🚀 حلمي في البرمجة </h3>
+                        <p>حلمي ان اتعلم الأمن السيبراني واصبح هاكرا أخلاقيا محترفًا</p>
+                    </div>
+                </div>
+            </div>        
+            
+            <div class="tips_card">
+                <div class="tips_info">
+                    <h3>💻 رحلتي في البرمجة</h3>
+                    <p>بدأت بدراسة أساسيات علوم الحاسب من خلال CS50، ثم انتقلت إلى تعلم HTML وCSS لبناء مواقع الويب، وما زلت أطور مهاراتي من خلال تنفيذ مشاريع حقيقية واكتساب خبرة عملية.</p>
+                </div>
+            </div>
+         
+            <div class="tips_card">
+                <div class="tips_info">
+                    <h3>🎯 رؤيتي للمستقبل</h3>
+                    <p>أطمح إلى أن تصبح أكاديمية التنين منصة عربية مميزة لتعليم البرمجة، تساعد المبتدئين على التعلم بطريقة عملية ومبسطة، مع الاستمرار في تطوير نفسي حتى أصبح هاكرا أخلاقيا محترفًا وأحقق أثرًا إيجابيًا في المجتمع التقني.</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- ========================================================================================= -->
+        
         <section class="tracks-section" id="tracks">
             <h2 class="track_title">المسارات <span>التعليمية</span></h2>
             
@@ -130,7 +214,7 @@
                     <div class="track_info">
                         <h3>HTML5 = هيكلة صفحات الويب</h3>
                         <p>حجر الأساس لكل مواقع الإنترنت. ستتعلم كيف تبني الهيكل البنائي والأساسي لأي صفحة ويب بالكامل، وتتحكم في توزيع عناصرها الأساسية.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>
@@ -141,8 +225,8 @@
                     </div>
                     <div class="track_info">
                         <h3>CSS = جمال وتنسيق المواقع</h3>
-                        <p>حجر الأساس لكل مواقع الإنترنت. ستتعلم كيف تبني الهيكل البنائي والأساسي لأي صفحة ويب بالكامل، وتتحكم في توزيع عناصرها الأساسية.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>تُعد CSS حجر الأساس في تصميم واجهات الويب، حيث تمنح المطور القدرة على إنشاء صفحات أنيقة، متناسقة، وسهلة الاستخدام مع تجربة مستخدم مميزة.</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>    
@@ -154,7 +238,7 @@
                     <div class="track_info">
                         <h3>JavaScript = محرك الذكاء والتفاعل</h3>
                          <p>لغة الروح والحركة. ستجعل صفحات موقعك حية وتتفاعل مع المستخدم بشكل ذكي وتتحكم في عناصر الصفحة بالكامل.</p>   
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>            
@@ -166,7 +250,7 @@
                     <div class="track_info">
                         <h3>C Language = أم اللغات والتأسيس</h3>
                         <p>بوابتك الذهبية لـ فهم عقل الكمبيوتر، طريقة إدارة الذاكرة (Memory)، وبناء تفكير برمجي صارم وخالٍ من الأخطاء.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>
@@ -178,8 +262,8 @@
                     </div>
                     <div class="track_info">
                         <h3>C++ = القوة والبرمجة الكائنية</h3>
-                        <p>لغة الأنظمة العملاقة والألعاب. ستتعلق بمفاهيم الـ OOP وتتعلم كيف تبني برامج فائقة السرعة والأداء.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لغة الأنظمة العملاقة والألعاب. ستتعمق بمفاهيم الـ OOP وتتعلم كيف تبني برامج فائقة السرعة والأداء.</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>
@@ -191,7 +275,7 @@
                     <div class="track_info">
                         <h3>C# = تطوير الألعاب وتطبيقات سطح المكتب</h3>
                         <p>وتتعلم كيف تبني ألعاب احترافية باستخدام محرك Unity والأنظمة المتكاملة. ستتقن لغة مايكروسوفت القوية لبناء برامج سريعة.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>
@@ -203,7 +287,7 @@
                     <div class="track_info">
                         <h3>Python = السهولة والذكاء الاصطناعي</h3>
                         <p>اللغة الأكثر طلباً وعصرية. تتميز بمرونتها وسهولة قراءتها، وستفتح لك أبواب علم البيانات، الذكاء الاصطناعي، والباك إند.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div>
                 </div>
@@ -215,7 +299,7 @@
                     <div class="track_info">
                         <h3>Java = تطوير تطبيقات الموبايل والأنظمة الذكية</h3>
                         <p>وتتعلم كيف تبني برامج قوية وأنظمة الـ Backend للأندرويد والمواقع الكبرى. ستتعمق بمفاهيم الـ OOP لتطوير سرفرات آمنة.</p>
-                        <p>لزايدة معلوماتك زور موقع</p>
+                        <p>لزيادة معلوماتك زور موقع</p>
                         <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
                     </div> 
                 </div>
@@ -236,15 +320,6 @@
 
         <section class="tips_section" id="tips">
             <h2 class="tips_title">نصائح <span>التنين</span></h2>
-        
-            <div class="tips_content">
-                <div class="tips_card">
-                    <div class="tips_info">
-                        <h3>🔥 لا تحفظ الكود، افهم المنطق</h3>
-                        <p>البرمجة مش كتاب تاريخ! اتعلم إزاي المشكلة بتتحل وفكر في الخطوات (Algorithm) قبل ما تكتب سطر كود واحد.</p>
-                    </div>
-                </div>
-            </div>
         
             <div class="tips_content">
                 <div class="tips_card">
@@ -383,6 +458,7 @@
             <ul>
                 <li><a href="#home_page">الرئيسية</a></li>
                 <li><a href="#about_academy">عن الأكاديمية</a></li>
+                <li><a href="#about_me">نبذة عني</a></li>
                 <li><a href="#tracks">المسارات التعليمية</a></li>
                 <li><a href="#tips">نصائح التنين</a></li>
             </ul>
@@ -397,7 +473,7 @@
                 <li>تحديث مستمر يواكب سوق العمل</li>
             </ul>
         </div>
-
+        
         <div class="footer-section">
             <h3>تابعنا وتفاعل معنا</h3>
             <div class="social-links-grid">
@@ -413,6 +489,10 @@
     </div>
 
     <div class="footer-bottom">
+        <p>شركاء النجاح </p>
+        <p class="success">
+            الشيخ: رزق سيد <span class="separator">||</span> المستشار التسويقي: أيمن الريحاني
+        </p>
         <p>© 2026 جميع الحقوق محفوظة لأكاديمية التنين 🐉</p>
         <p>صُنع بحب ❤❤ من قِبل التنين أحمد رزق </p>    
     </div>

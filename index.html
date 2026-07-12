@@ -19,8 +19,10 @@
     <link href="roadmap.css" rel="stylesheet">
     <link href="channels.css" rel="stylesheet">
     <link href="tracks.css" rel="stylesheet">
+    <link href="compiler.css" rel="stylesheet">
     <link href="about_me.css" rel="stylesheet">
     <link href="about.css" rel="stylesheet">
+    <link href="FAQ.css" rel="stylesheet">
     <link href="tips.css" rel="stylesheet">
     <link href="contact.css" rel="stylesheet">
     <link href="footer.css" rel="stylesheet">
@@ -53,26 +55,30 @@
 <body>
     
     <header>
+        
+        <div class="logo">
+            <a href="index.html">
+                <img src="Dragon.png" alt="Dragon_Academy">
+            </a>
+        </div>
+        
+        
         <input type="checkbox" id="check" class="menu_toggle">
     
         <label for="check" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class="fa-solid fa-dragon"></i>
         </label>
         
-        <a href="index.html" class="logo">
-           🐉أكاديمية التنين
-        </a>
-        <nav class="navigation"> 
-            <a href="#home_page">الرئيسية</a>
-            <a href="#about_academy">عن الأكاديمية</a>
-            <a href="#about_me">نبذة عني</a>
-            <a href="#tracks">المسارات التعليمية</a>
-            <a href="#tips">نصائح التنين</a>
-            <a href="#contact">التواصل</a>
-            
-        </nav>
+        <ul class="navigation">
+            <li><a href="#home_page">الرئيسية</a></li>
+            <li><a href="#about_academy">عن الأكاديمية</a></li>
+            <li><a href="#about_me">نبذة عني</a></li>
+            <li><a href="#tracks">المسارات التعليمية</a></li>
+            <li><a href="#FAQ">الأسئلة الشائعة</a></li>
+            <li><a href="#tips">نصائح التنين</a></li>
+            <li><a href="#contact">التواصل</a></li>
+        </ul>   
+    
     </header>
     
     <!--================================================================================================================= -->
@@ -100,11 +106,28 @@
             </div>
             
             <div class="poto">
-                <img src="poto3.png" alt="My photo">
+                <img src="photo.png" alt="My photo">
             </div>
         </section>
 
         <!-- =================================================================================================================== -->  
+        
+        <!-- الفيديو الترحيبي -->
+
+        <section class="video-container">
+            
+            <video controls poster="photo.png">
+                <source src="Dragon_Video.mp4">
+                
+                <track src="Dragon_Video_EN.vtt" kind="subtitles" label="English">
+                
+                <track src="Dragon_Video_EN.vtt" kind="subtitles" label="Arabic">
+            </video>
+
+        </section>
+
+
+        <!-- =============================================================================================== -->
         
         <section class="about" id="about_academy">
             <h2 class="title">عن <span>الأكاديمية</span></h2>
@@ -413,6 +436,64 @@
         </section>    
         <!--===========================================================================================================================  -->
        
+        <section class="tips_section" id="FAQ">
+            <h2 class="FAQ_title">الأسئلة <span>الشائعة</span></h2>
+        
+            <div class="tips_content">
+                <div class="tips_card">
+                    <div class="FAQ_info">
+                        <h3>هل أحتاج أن أكون جيدًا في الرياضيات لأتعلم البرمجة؟</h3>
+                        <p>لا. يمكنك البدء في تعلم البرمجة حتى لو كان مستواك في الرياضيات متوسطًا
+                             ستحتاج بعض المفاهيم الرياضية في مجالات معينة مثل الذكاء الاصطناعي أو الرسومات،
+                             لكن أساسيات البرمجة لا تتطلب ذلك.
+                            </p>    
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="tips_content">
+                <div class="tips_card">
+                    <div class="FAQ_info">
+                        <h3>ما هي أول لغة برمجة أتعلمها؟</h3>
+                        <p>يعتمد ذلك على هدفك، لكن للمبتدئين أنصح بـ:
+
+                            Python إذا كنت تريد التعلم بسهولة.
+                            C لفهم أساسيات البرمجة بعمق.
+                            JavaScript إذا كان هدفك تطوير مواقع الويب.</p>   
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="tips_content">
+                <div class="tips_card">
+                    <div class="FAQ_info">
+                        <h3>هل يجب أن أحفظ الأكواد؟</h3>
+                        <p>لا، المهم أن تفهم الفكرة وطريقة التفكير. مع كثرة الممارسة ستتذكر الأكواد الأكثر استخدامًا تلقائيًا.</p>    
+                    </div>
+                </div>
+            </div>
+        
+            <div class="tips_content">
+                <div class="tips_card">
+                    <div class="FAQ_info">
+                        <h3>هل أحتاج جهاز كمبيوتر قوي؟</h3>
+                        <p>لا. معظم لغات البرمجة وأدوات التعلم تعمل على أجهزة متوسطة الإمكانيات، ولا تحتاج إلى جهاز احترافي في البداية.</p>    
+                    </div>
+                </div>
+            </div>
+        
+            <div class="tips_content">
+                <div class="tips_card">
+                    <div class="FAQ_info">
+                        <h3>ماذا أفعل إذا واجهت خطأ (Error) ولم أعرف حله؟</h3>
+                        <p>اقرأ رسالة الخطأ جيدًا، وحاول البحث عنها أو اسأل في مجتمعات البرمجة أو استخدم أدوات الذكاء الاصطناعي للمساعدة. الأخطاء جزء طبيعي من رحلة التعلم.</p>    
+                    </div>
+                </div>
+            </div>
+        
+        <!-- ====================================================================================================== -->
         <section class="contact_section" id="contact">
             <h2 class="contact_title">لنصنع <span>شيئاً معاً.</span> </h2>
             
@@ -460,6 +541,7 @@
                 <li><a href="#about_academy">عن الأكاديمية</a></li>
                 <li><a href="#about_me">نبذة عني</a></li>
                 <li><a href="#tracks">المسارات التعليمية</a></li>
+                <li><a href="#FAQ">الأسئلة الشائعة</a></li>
                 <li><a href="#tips">نصائح التنين</a></li>
             </ul>
         </div>
@@ -471,6 +553,7 @@
                 <li>مسارات تبدأ معك من الصفر</li>
                 <li>ترشيح افضل المواقع في البرمجة</li>
                 <li>تحديث مستمر يواكب سوق العمل</li>
+                <li>استعراض اهم الأسئلة التي تسيطر علي ذهن المبتدئين</li>
             </ul>
         </div>
         
@@ -501,31 +584,21 @@
 
 
 
+<script>
+    const video = document.querySelector('.video-container video');
 
+    // 1. لو الفيديو خلص تماماً.. يرجع يعرض البوستر
+    video.addEventListener('ended', () => {
+        video.load(); // السطر ده بيعمل إعادة تحميل للفيديو فيرجع للبوستر الأصلي
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // 2. لو المستخدم رجع الشريط يدوي للبداية (الوقت صفر) وهو عامل إيقاف
+    video.addEventListener('timeupdate', () => {
+        if (video.currentTime === 0 && video.paused) {
+            video.load();
+        }
+    });
+</script>
 
 </body>
 </html>

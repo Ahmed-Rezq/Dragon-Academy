@@ -48,42 +48,7 @@ img {
 /* ---------------------------------------------------------------------
    2) قائمة الموبايل (الهامبرجر) - مبنية بـ CSS فقط بدون جافاسكريبت
 --------------------------------------------------------------------- */
-.menu_toggle {
-    display: none; /* الشيك بوكس نفسه مخفي، بنستخدمه بس عشان نتحكم في الحالة */
-}
-
-.hamburger {
-    display: none; /* يبان بس في الموبايل */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    width: 42px;
-    height: 36px;
-    z-index: 1100;
-    flex-shrink: 0;
-}
-
-.hamburger span {
-    display: block;
-    width: 26px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-/* أنيميشن تحول الهامبرجر لعلامة X لما القايمة تتفتح */
-.menu_toggle:checked ~ .hamburger span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-.menu_toggle:checked ~ .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-.menu_toggle:checked ~ .hamburger span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
+/* 3. إخفاء التشيك بوكس تماماً */
 
 /* ---------------------------------------------------------------------
    3) Tablets الكبيرة / اللابتوب الصغير (<= 1024px)
@@ -159,58 +124,63 @@ img {
     } 
     
     /* ===== الهيدر و القائمة ===== */
-    header {
-        top: 12px;
-        left: 50% !important;
-        transform: translateX(-50%) !important; 
-        width: 90% !important; 
-        max-width: 450px !important; 
-        padding: 10px 20px !important;
-        display: flex !important;
-        flex-direction: row-reverse !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
+header
+{
+    position: fixed; /* بيخليه ثابت مكانه فوق علطول وأنت بتعمل سكرول */
+    top: 20px;       /* بيبعده عن السقف من فوق عشان ميبقاش ملزوق */
+    left: 5%;        /* بيوسطن الشريط في الشاشة من الشمال */
+    width: 90%;      /* بيخلي عرضه أصغر شوية من عرض الشاشة بالكامل عشان يبان طاير */
+    height: 80px;
+    z-index: 1000;    /* نفس القيمة بتاعتك عشان يفضل فوق الكروت */
+    display: flex;   /* نفس الكود بتاعك */
+    justify-content: space-between;
+    align-items: center; 
+    
+    flex-direction: row;
+    
+    /* الستايل الجديد المضاف (الحواف الدائرية والخلفية والظل) */
+    background-color: rgb(6, 13, 32); /* نفس لونك المفضل */
+    border-radius: 40px;            /* بيعمل الحواف الدائرية الفخمة */
+    padding: 12px 40px;             /* تظبيط المسافات الداخلية جوه الشريط */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* بيعمل ظل خفيف يخليه كأنه طاير ببعد تالت */
+
+    border: 3px solid white;
+
+}
     .logo {
         font-size: 20px;
     }
 
-    .hamburger {
-        display: flex;
-    }
+    .menu_toggle 
+{
+    display: none;
+}
 
-    .navigation {
-        position: absolute;
-        top: calc(100% + 15px);
-        left: 0;
-        width: 100%;
-        background-color: rgb(6, 13, 32);
-        border: 2px solid white;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 20px 0;
+.hamburger {
+      
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    width: 42px;
+    z-index: 1100;
+    flex-shrink: 0;
+}
 
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        pointer-events: none;
-        transition: all 0.35s ease;
-    }
+.hamburger i 
+{
+    font-size: 32px;
+    color: #00c3ff;
+    transition: 0.3s;
+}
 
-    .menu_toggle:checked ~ .navigation {
-        max-height: 400px;
-        opacity: 1;
-        pointer-events: auto;
-        padding: 20px 0;
-    }
-
-    .navigation a {
-        padding: 8px 0;
-        font-size: 16px;
-    }
+/* أنيميشن تحول الهامبرجر لعلامة X لما القايمة تتفتح */
+.menu_toggle:checked ~ .hamburger i:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
 
     /* ===== سيكشن الهوم ===== */
     .home {

@@ -1,0 +1,43 @@
+.FAQ_title
+{
+    text-align: center;
+    color: blueviolet;
+    text-shadow: 0 0 25px blueviolet;
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.FAQ_title span 
+{
+    color:  rgb(255, 255, 255);
+    text-shadow: 0 0 25px  rgb(255, 255, 255);
+}
+
+
+.FAQ_info
+{
+    direction: rtl;       /* بيجبر النص يبدأ من اليمين تماماً (أول الكارت) */
+    text-align: right;    /* بيحاذي الكلام لليمين */
+    width: 100%;          /* بيخلي الحاوية تاخد عرض الكارت بالكامل */
+    word-wrap: break-word; /* الأمان: لو فيه كلمة طويلة جداً بيكسرها وينزلها سطر */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   
+
+
+.FAQ_info h3 {
+    color: rgb(255, 0, 0);
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.FAQ_info p {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: right;
+    font-weight: 600;
+}

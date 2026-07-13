@@ -1,0 +1,28 @@
+/* تنسيق زر الشات الطاير */
+.chat-floating-btn {
+    position: fixed;
+    bottom: 30px;        /* المسافة من أسفل الشاشة */
+    left: 30px;          /* تثبيته على الجنب الشمال */
+    width: 70px;
+    height: 70px;
+    background-color: #180761; /* لون النيون الأزرق للأكاديمية */
+    color: #ffffff;      /* لون الأيقونة الداكن عشان يباين الأزرق */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;     /* حجم أيقونة الشات جوه الدائرة */
+    box-shadow: 0 4px 15px rgba(8, 26, 107, 0.4), 
+                0 0 20px rgba(6, 10, 85, 0.2);
+    z-index: 9999;       /* يفضل فوق كل عناصر الموقع دايماً */
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+/* تأثير عند تمرير الماوس (Hover) */
+.chat-floating-btn:hover {
+    transform: scale(1.1) translateY(-5px); /* تكبير وسحب خفيف لفوق */
+    box-shadow: 0 6px 25px rgba(0, 195, 255, 0.7);
+    background-color: #0099cc; /* درجة أغمق سيكا عند الـ hover */
+    color: rgb(0, 0, 0);               /* قلب لون الأيقونة للأبيض */
+}

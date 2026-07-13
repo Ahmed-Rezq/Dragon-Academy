@@ -173,7 +173,7 @@ header
 .hamburger i 
 {
     font-size: 32px;
-    color: #00c3ff;
+    color: #ffffff;
     transition: 0.3s;
 }
 
@@ -312,12 +312,90 @@ header
 --------------------------------------------------------------------- */
 @media (max-width: 480px) {
 
-    header {
-        padding: 10px 15px;
-        border-radius: 25px;
-    }
+header
+{
+    position: fixed; /* بيخليه ثابت مكانه فوق علطول وأنت بتعمل سكرول */
+    top: 20px;       /* بيبعده عن السقف من فوق عشان ميبقاش ملزوق */
+    left: 5%;        /* بيوسطن الشريط في الشاشة من الشمال */
+    width: 90%;      /* بيخلي عرضه أصغر شوية من عرض الشاشة بالكامل عشان يبان طاير */
+    height: 80px;
+    z-index: 1000;    /* نفس القيمة بتاعتك عشان يفضل فوق الكروت */
+    display: flex;   /* نفس الكود بتاعك */
+    justify-content: space-between;
+    align-items: center; 
+    
+    flex-direction: row;
+    
+    /* الستايل الجديد المضاف (الحواف الدائرية والخلفية والظل) */
+    background-color: rgb(6, 13, 32); /* نفس لونك المفضل */
+    border-radius: 40px;            /* بيعمل الحواف الدائرية الفخمة */
+    padding: 12px 20px;             /* تظبيط المسافات الداخلية جوه الشريط */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* بيعمل ظل خفيف يخليه كأنه طاير ببعد تالت */
 
-    .navigation 
+    border: 3px solid white;
+
+}
+
+.logo
+{
+  order: 1;  
+  
+}
+
+
+
+.logo img {
+    
+    
+    height: 120px;      /* حدد الارتفاع اللي انت عايزه بالظبط */
+    width: 150px;        /* عشان النسبة تفضل سليمة ومايحصلش تمطيط */
+    display: block;      /* يمنع أي مسافة زيادة تحت الصورة */
+    object-fit: contain; /* لو الصورة مش مربعة أو فيها استايل غريب */     
+    transition: all 0.3s ease;  
+}
+
+.logo:hover
+{
+    color: rgb(202, 190, 186);
+    transform: scale(1.1);
+}
+
+
+/* 3. إخفاء التشيك بوكس تماماً */
+.menu_toggle 
+{
+    display: none;
+}
+
+.hamburger {
+      
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    width: 42px;
+    z-index: 1100;
+    flex-shrink: 0;
+}
+
+.hamburger i 
+{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+/* أنيميشن تحول الهامبرجر لعلامة X لما القايمة تتفتح */
+.menu_toggle:checked ~ .hamburger i:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+
+/* 5. تنسيق القائمة المستخبية (العناصر اللي هتظهر لما تفتح المنيو) */
+.navigation 
 {
     list-style: none;
     position: absolute;
@@ -345,12 +423,14 @@ header
     transition: .35s ease;
 
     z-index: 100;
-}
-  
+    
 
-    .logo {
-        font-size: 17px;
-    }
+}
+ 
+
+    /* .logo {
+        font-size: 13px;
+    } */
 
     section {
         padding-top: 60px;
@@ -456,4 +536,13 @@ header
     .footer-section h3 {
         font-size: 16px;
     }
+/* تعديل حجم أيقونة الشات الطايرة للموبايل */
+    .chat-floating-btn {
+        width: 48px;        /* بدل 60px عشان ما تبقاش ضخمة */
+        height: 48px;       /* بدل 60px */
+        bottom: 20px;       /* نقربها من الحافة شوية عشان نوفر مساحة */
+        left: 20px;         /* نقربها من الشمال */
+        font-size: 22px;    /* تصغير حجم علامة الشات جوة الدائرة */
+    }
+
 }

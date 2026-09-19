@@ -38,29 +38,40 @@
     flex-wrap: wrap;   
 }
 
-.card
-{
-    background: rgb(238, 233, 233); 
-    border-radius: 20px;
+
+
+.card {
+    width: 400px;
     padding: 30px;
     margin: 20px;
-    
-    width: 400px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    transition: 0.7s ease;
+
+    /* زجاج شفاف */
+    background: rgba(255, 255, 255, 0.00);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid rgb(8, 212, 25);
+    border-radius: 20px;
+
+    /* تغبيش الخلفية اللي ورا البطاقة */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* ظل */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+    transition: 0.4s ease;
 }
 
-.card:hover
-{
-    transform: scale(1.05);
-   background: rgb(224, 208, 208); 
-} 
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.11);
+}
 
 .icon
 {
-    color: #000000;  
+    color: #f7f0f0;  
     text-shadow: 0 0 10px #000000;
-    font-size: 128px;
+    font-size: 60px;
     text-align: center;
     margin-bottom: 30px;   
 }
@@ -80,7 +91,7 @@
 
 .info p
 {   
-    color: #e20303;
+    color: #ffffff;
     text-align: center;
     font-weight: 800;
     margin-bottom: 15px;

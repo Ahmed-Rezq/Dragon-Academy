@@ -2,23 +2,19 @@
 
 body
 {
-    background: url(back3.png);
+    background: url(back5.png);
 
     
-    /* جعل الخلفية تغطي الشاشة بالكامل */
     background-size: cover;
     
-    /* تجميد الخلفية مكانها أثناء السكرول لجعل الحركة ناعمة (Parallax Effect) */
     background-attachment: fixed;
     
-    /* توسيط الصورة في الشاشة */
     background-position: center;
     
-    /* منع تكرار الصورة */
     background-repeat: no-repeat;
     
-    /* تأكيد لون الخط الافتراضي إنه فاتح عشان يتباين مع الخلفية الغامقة */
-    
+   
+
 }
 
 
@@ -91,7 +87,7 @@ header
 
 .logo img {
     
-    height: 160px;      /* حدد الارتفاع اللي انت عايزه بالظبط */
+    height: 150px;      /* حدد الارتفاع اللي انت عايزه بالظبط */
     width: auto;        /* عشان النسبة تفضل سليمة ومايحصلش تمطيط */
     display: block;      /* يمنع أي مسافة زيادة تحت الصورة */
     object-fit: contain; /* لو الصورة مش مربعة أو فيها استايل غريب */     
@@ -129,19 +125,13 @@ header
 {
     font-size: 32px;
     color: rgb(255, 255, 255);
-    transition: 0.3s;
+    transition: 0.5s ease;
 }
 
 /* أنيميشن تحول الهامبرجر لعلامة X لما القايمة تتفتح */
 .menu_toggle:checked ~ .hamburger i:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
-/* .menu_toggle:checked ~ .hamburger i:nth-child(2) {
-    opacity: 0;
-}
-.menu_toggle:checked ~ .hamburger i:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-} */
 
 
 /* 5. تنسيق القائمة المستخبية (العناصر اللي هتظهر لما تفتح المنيو) */
@@ -203,11 +193,6 @@ header
     transform: scale(1.2);
 }
 
-
-
-
-
-
 .home {
     display: flex;
     flex-direction: row;
@@ -218,45 +203,46 @@ header
     min-height: 100vh;
     padding: 60px 10%;
     
-    /* background : url(back.png);
+    background : url(Ahmed.jfif);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center; */
+    background-position: center;
 
 }
 
 /* 1. صندوق الصورة (تأمين المحاذاة مع الكلام) */
-.poto {
+ /* .poto {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center; /* بيضمن إن الصورة تكون في نفس مستوى الكلام بالظبط عمودياً */
-}
+    align-items: center; 
+    
+}  */
 
 
 /* 2. تنسيق الصورة وتأثير قطرة الماء المتحركة */
-.poto img {
-    width: 320px; /* حددنا حجم مناسب ومتناسق للصورة */
-    height: 320px;
-    object-fit: cover; /* بيضمن إن صورتك متتمطش وتفضل بأبعادها الطبيعية جوه الإطار */
+/* .poto img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;   */
     
     /* خلفية قطرة الماء */
-    background:whitesmoke;
+    /* background:whitesmoke; */
 
     /* تحديد لون الإطار الفاتح (بينور ويزهى مع الخلفية الغامقة) */
-    border: #31043c solid 3px; 
+    /* border: #0c033a solid 3px;  */
     
     /* السحر هنا: شكل قطرة الماء غير المنتظم */
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    /* border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; */
     
     /* تفعيل الأنيميشن اللي هيحرك القطرة */
-    animation: blobMorph 5s ease-in-out infinite;
+    /* animation: blobMorph 5s ease-in-out infinite; */
     
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* ضل يبرزها عن الخلفية */
-}
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); ضل يبرزها عن الخلفية */
+/* } */
 
 /* 3. كود حركة قطرة الماء (التموج المائي) */
-@keyframes blobMorph {
+/* @keyframes blobMorph { 
     0% {
         border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     }
@@ -269,7 +255,7 @@ header
     100% {
         border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; 
     }
-}
+}  */
 
 .text h3
 {

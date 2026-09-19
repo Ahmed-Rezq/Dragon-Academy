@@ -38,7 +38,8 @@
 }
 
 .track_card {
-    background: linear-gradient(145deg, rgb(211, 163, 203), rgb(255, 255, 255));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid rgb(8, 212, 25);
     width: 400px;
     box-shadow: 0 10px 25px rgb(68, 36, 36) ;
     border-radius: 20px;
@@ -59,9 +60,9 @@
 
 .track_icon
 {
-    color: rgb(72, 2, 151);  
+    color: rgb(212, 207, 218);  
     text-shadow: 0 0 10px rgba(168, 97, 235, 1);
-    font-size: 125px;
+    font-size: 60px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -73,20 +74,20 @@
 
 
 .track_info h3 {
-    color: rgb(72, 2, 151);
+    color: rgb(197, 171, 226);
     font-size: 22px;
     margin-bottom: 10px;
 }
 
 .track_info p {
-    color: rgb(100, 79, 175);
+    color: rgb(255, 255, 255);
     font-size: 16px;
 }
 
 .track_info a
 {
     text-decoration: none;
-    color: rgb(39, 1, 54);
+    color: rgb(31, 194, 16);
     font-weight: 700;
     font-size: 25px;
 }
